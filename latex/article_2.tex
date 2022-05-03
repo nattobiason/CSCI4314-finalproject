@@ -1,0 +1,192 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.4 (15/5/16)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com) with extensive modifications by
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[twoside,twocolumn]{article}
+
+\usepackage{blindtext} % Package to generate dummy text throughout this template 
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[english]{babel} % Language hyphenation and typographical rules
+
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+
+\usepackage{enumitem} % Customized lists
+\setlist[itemize]{noitemsep} % Make itemize lists more compact
+
+\usepackage{abstract} % Allows abstract customization
+\renewcommand{\abstractnamefont}{\normalfont\bfseries} % Set the "Abstract" text to bold
+\renewcommand{\abstracttextfont}{\normalfont\small\itshape} % Set the abstract itself to small italic text
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\roman{subsection}} % roman numerals for subsections
+\titleformat{\section}[block]{\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[C]{Ant Navigation Model $\bullet$ May 2022 $\bullet$ CSCI 4314} % Custom header text
+\fancyfoot[RO,LE]{\thepage} % Custom footer text
+
+\usepackage{titling} % Customizing the title section
+
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\setlength{\droptitle}{-4\baselineskip} % Move the title up
+
+\pretitle{\begin{center}\Huge\bfseries} % Article title formatting
+\posttitle{\end{center}} % Article title closing formatting
+\title{Ant Navigation Model Based on Pheromone Detection} % Article title
+\author{%
+\textsc{Natalie Tobiason} \\[1ex] % Your name
+\normalsize University of Colorado Boulder - CSCI 4314 Final Project\\ % Your institution
+% \normalsize CSCI 4314 Final Project % Your email address
+%\and % Uncomment if 2 authors are required, duplicate these 4 lines if more
+%\textsc{Jane Smith}\thanks{Corresponding author} \\[1ex] % Second author's name
+%\normalsize University of Utah \\ % Second author's institution
+%\normalsize \href{mailto:jane@smith.com}{jane@smith.com} % Second author's email address
+}
+\date{\today} % Leave empty to omit a date
+\renewcommand{\maketitlehookd}{%
+\begin{abstract}
+\noindent \blindtext % Dummy abstract text - replace \blindtext with your abstract text
+\end{abstract}
+}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+% Print the title
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+\lettrine[nindent=0em,lines=3]{A} nt colonies are well organized biological societies that rely on social and communication skills between each individual ant. One means of communication for the ants is through pheromones. Pheromones are a chemical produced by the ant in order to trigger the behaviors of other ants in the colony. Pheromones are found in a wide range of habitats, however, they are crucial to ant foraging, especially for species that rely on pheromone trails. Essentially, ants leave pheromone trails to communicate information about resources such as direction, distance, quantity, and so on. Utamitly, these pheromones create a network of paths that allow ant colonies to forage efficiently. \\
+This paper aims to depict a mathematical model which mirrors the movements of foraging ants in a colony. The model relies on correlated and biased random walk algorithms which are dependent on the amount of pheromone present in the individual ants sensing region. This sensing area is derived from the half-angle $\beta$ less than $\frac{\pi}{2}$ which Paulo Amorim et al. (2019) claims is necessary for stable trail following behavior. Considering the behavior of ants not always following trails, this model also uses a probability function from Dante R. Chialvo et al. (1995). Finally, this model uses pheromone depletion and created functions from Elton B. Bandeira et al. (2010).
+
+
+%------------------------------------------------
+
+\section{Related Work}
+
+There is quite extensive research on the behavior of ant colonies considering their abundance within reach and the ease with which they can be analyzed in a laboratory setting. This paper focuses on a few ant navigation papers discussed below. 
+
+\begin{itemize}
+\item Donec dolor arcu, rutrum id molestie in, viverra sed diam
+\item Curabitur feugiat
+\item turpis sed auctor facilisis
+\item arcu eros accumsan lorem, at posuere mi diam sit amet tortor
+\item Fusce fermentum, mi sit amet euismod rutrum
+\item sem lorem molestie diam, iaculis aliquet sapien tortor non nisi
+\item Pellentesque bibendum pretium aliquet
+\end{itemize}
+\blindtext % Dummy text
+
+Text requiring further explanation\footnote{Example footnote}.
+
+%------------------------------------------------
+
+\section{Methods}
+
+\begin{table}
+\caption{Example table}
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Name} \\
+\cmidrule(r){1-2}
+First name & Last Name & Grade \\
+\midrule
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+When beginning the foraging process, ants will obviously start at their colony's nest. In order to depict the behavior of ants navigating away from their nest we apply a correlated random walk. At each random walk step, the velocity of the individual ant is determined by: 
+\begin{equation}
+  \label{eq:crwx}
+  \triangle X_{i+1} = v[cos(\theta_i+\theta_i^{CRW})]
+\end{equation}
+\begin{equation}
+  \label{eq:crwy}
+  \triangle Y_{i+1} = v[sin(\theta_i+\theta_i^{CRW})]
+\end{equation}
+where $v$ is the step size and $\theta_i^{CRW}$ is a random angle from a uniform probability distribution function with mean $0$ and variance $\theta^{CRW}$ (Peleg, 2022).
+
+As the ant is navigating away from the nest it lays pheromones at a rate of $\eta = 0.07$. At each time step the pheromone concentration is determined by: 
+\begin{equation}
+  \label{eq:p_dep}
+  C_i[k+1]=C_i[k](\kappa) 
+\end{equation}
+where $C(x,y)$ is the pheromone concentration at point $(x,y)$ in our sample field and $\kappa = 0.015$ is the rate of evaporation. 
+
+
+
+%------------------------------------------------
+
+\section{Results}
+
+\subsection{Subsection One}
+
+A statement requiring citation \cite{Figueredo:2009dg}.
+\blindtext % Dummy text
+
+\subsection{Subsection Two}
+
+\blindtext % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
